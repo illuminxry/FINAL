@@ -46,9 +46,13 @@ exports.getIndex = async (req, res) => {
 exports.getDashboard = async(req,res,err) => {
   // res.redirect('/dashboard')
   const userId = session.userId;
+  const userLevel = req.userlevel;
   if (!userId) {
     console.log(err);
     res.redirect('/');
+  }else if(userLevel === 'User'){
+    res.redirect('/home');
+    
   }else{
     res.render('dashboard')
   }
