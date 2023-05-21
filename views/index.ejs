@@ -66,9 +66,11 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav d-flex flex-row ms-auto me-3">
+							<% if (userlevel==='Manager' || userlevel==='Admin' ) { %>
 							<li class="nav-item">
 								<a class="nav-link" href="/dashboard">Dashboard</i></a>
 							</li>
+							<% } %>
 							<li class="nav-item">
 								<a class="nav-link" href="/create">Add User <i class="fa-solid fa-user-plus"></i></a>
 							</li>
@@ -80,7 +82,7 @@
 								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 									<li><a class="dropdown-item" href="/">Logout</a></li>
 								</ul>
-								
+
 							</li>
 						</ul>
 					</div>
